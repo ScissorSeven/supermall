@@ -5,33 +5,43 @@ const Home = () => import('views/home/Home')
 const Category = () => import('views/category/Category')
 const Cart = () => import('views/cart/Cart')
 const Profile = () => import('views/profile/Profile')
+const goodslist = () => import("views/goodslist/goodslist");
+const detail = () => import("views/detail/detail");
 
 // 1.安装插件
 Vue.use(VueRouter)
 
 // 2.创建路由对象
 const routes = [
-  {
-    path: '',
-    redirect: '/home'
-  },
-  {
-    path: '/home',
-    component: Home
-  },
-  {
-    path: '/category',
-    component: Category
-  },
-  {
-    path: '/cart',
-    component: Cart
-  },
-  {
-    path: '/profile',
-    component: Profile
-  }
-]
+	{
+		path: "",
+		redirect: "/home",
+	},
+	{
+		path: "/home",
+		component: Home,
+	},
+	{
+		path: "/category",
+		component: Category,
+	},
+	{
+		path: "/cart",
+		component: Cart,
+	},
+	{
+		path: "/profile",
+		component: Profile,
+	},
+	{
+		path: "/goodslist",
+		component: goodslist,
+	},
+	{
+		path: "/detail",
+		component: detail,
+	},
+];
 const router = new VueRouter({
   routes,
   mode: 'history'
